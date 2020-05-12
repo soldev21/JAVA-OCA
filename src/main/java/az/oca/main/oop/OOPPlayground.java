@@ -4,8 +4,9 @@ public class OOPPlayground {
     public static void main(String[] args) {
         int a = 5;
 //        Human.eyeCount = 2;
-        Human.greetingStatic();
-        Human human = new Human();
+        Human.greetingStatic("Ferid",36);
+        Human human; // declaration of human variable of Human type;
+        human = new Human(); //assignment new Human object reference to predeclared variable human.
         human.name = "Heydar";
         human.greeting();
 
