@@ -18,7 +18,7 @@ public class Human {
     }
 
     public Human(String name){
-
+        setName(name);
     }
 
     public String getName() {
@@ -60,5 +60,10 @@ public class Human {
 
     public static void greetingStatic(String name,int age){
         System.out.println("Hello "+name+" with age "+age);
+    }
+
+    @Override
+    public String toString(){
+        return name;
     }
 }

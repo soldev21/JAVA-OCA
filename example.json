@@ -1,0 +1,5 @@
+{
+  "minSalary": 2000,
+  "maxAge": 25,
+  "category" : "operations"
+}
