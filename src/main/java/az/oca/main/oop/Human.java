@@ -7,17 +7,16 @@ public class Human {
     public static double eyeCount = 0.0d;
 
 
-
     private String name;
     private int height;
     private String hairColor;
     private String eyeColor;
 
     // Explicit declaration of  Default constructor
-    public Human(){
+    public Human() {
     }
 
-    public Human(String name){
+    public Human(String name) {
         setName(name);
     }
 
@@ -53,17 +52,25 @@ public class Human {
         this.eyeColor = eyeColor;
     }
 
-    public void greeting(){
-        System.out.println("Hello "+name+" with eyeCount "+eyeCount);
+    public void greeting() {
+        System.out.println("Hello " + name + " with eyeCount " + eyeCount);
 
     }
 
-    public static void greetingStatic(String name,int age){
-        System.out.println("Hello "+name+" with age "+age);
+    public static void greetingStatic(String name, int age) {
+        System.out.println("Hello " + name + " with age " + age);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Human)) return false;
+        Human h = (Human) o;
+        return this.name.equals(h.name) && this.height == h.height;
     }
 }
